@@ -1,0 +1,22 @@
+{
+  "name": "prestashop",
+  "version": "1.0.0",
+  "description": "validating shopping page with adding an item and Item details",
+  "main": "index.js",
+  "scripts": {
+    "opencypress": "cypress open"
+  },
+  "author": "Sarika",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/stepDefinitions/*.{js,ts}"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  }
+}
