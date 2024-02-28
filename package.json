@@ -6,7 +6,8 @@
   "scripts": {
     "triggeralltestrun": "npx cypress run",
     "triggeralltestchrome":"npx cypress run --browser chrome",
-    "triggerspec":"npx cypress run --spec cypress/e2e/Homepage.feature"
+    "triggerspec":"npx cypress run --spec cypress/e2e/Homepage.feature",
+    "triggeralltestdashboard":"npx cypress run --record --key 425ba132-4499-490d-b5e0-64d4deb8f38e"
   },
   "author": "Sarika",
   "license": "ISC",

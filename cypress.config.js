@@ -6,6 +6,8 @@ module.exports = defineConfig({
   e2e: {
     baseUrl:"https://prestashop.ryviushop.com",
     specPattern:"cypress/e2e/**/*.feature",
+    projectId: "9ea613",
+
 
   
     // prefix async
