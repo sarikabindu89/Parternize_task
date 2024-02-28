@@ -3,7 +3,7 @@ import {Given,When,And,Then} from "@badeball/cypress-cucumber-preprocessor";
 
 When ('Click on Random Product',()=>{
     const productclick = new Productpage()
-    productclick.getProductDetails()
+    productclick.getProductDetails1()
 
 })
 Then ('Validate the Product Details', ()=>{
