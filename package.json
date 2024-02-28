@@ -4,7 +4,9 @@
   "description": "validating shopping page with adding an item and Item details",
   "main": "index.js",
   "scripts": {
-    "opencypress": "cypress open"
+    "triggeralltestrun": "npx cypress run",
+    "triggeralltestchrome":"npx cypress run --browser chrome",
+    "triggerspec":"npx cypress run --spec cypress/e2e/Homepage.feature"
   },
   "author": "Sarika",
   "license": "ISC",
