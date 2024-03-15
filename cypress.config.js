@@ -1,7 +1,19 @@
 const { defineConfig } = require("cypress");
+const cypressOnFix = require('cypress-on-fix');
+
 
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions:{
+    reportDir:'cypress/reporters',
+    charts:true,
+    embeddedScreenshots:true,
+    debug:true
+
+
+  },
+  
    
   e2e: {
     baseUrl:"https://prestashop.ryviushop.com",
@@ -9,9 +21,13 @@ module.exports = defineConfig({
     projectId: "9ea613",
 
 
-  
-    // prefix async
+  // prefix async
     async setupNodeEvents(on, config) {
+      on = cypressOnFix(on);
+
+
+      require('cypress-mochawesome-reporter/plugin')(on);
+
       const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esbuild').createEsbuildPlugin
       const createBundler = require('@bahmutov/cypress-esbuild-preprocessor')
 
@@ -29,7 +45,7 @@ module.exports = defineConfig({
   env:{
     productname:"Blouse"
 
-  }
-}
+  },
+},
+});
    
-})
