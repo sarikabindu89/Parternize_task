@@ -4,7 +4,7 @@ class Cartpage
     {
         cy.readFile("cypress/fixtures/Itemdetails.json").then(function (expectedurl) {
             cy.visit(expectedurl.itemlink);
-            cy.get("button.exclusive").should("be.enabled").click();
+            cy.get("button.exclusive1").should("be.enabled").click();
         });
     }
     validatecartquant()
